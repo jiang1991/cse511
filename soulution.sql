@@ -30,22 +30,24 @@ CREATE TABLE genres (
 
 --ratings
 CREATE TABLE ratings (
-    userid integer NOT NULL,
-    movieid integer NOT NULL,
-    rating smallint,
-    timestamp bigint
+    userid integer REFERENCES users(userid),
+    movieid integer REFERENCES movies(movieid),
+    rating numeric (2, 1),
+    timestamp bigint,
+    primary key (userid, movieid),
+    CHECK ( rating <= 5 AND rating >= 0)
 );
 
 --tags
 CREATE TABLE tags (
-    userid integer NOT NULL,
-    movieid integer NOT NULL,
-    tagid integer,
+    userid integer REFERENCES users(userid),
+    movieid integer REFERENCES movies(movieid),
+    tagid integer REFERENCES taginfo(tagid),
     timestamp bigint
 );
 
 --hasagenre
 CREATE TABLE hasagenre (
-    movieid integer NOT NULL,
-    genreid integer NOT NULL
-)
+    movieid integer REFERENCES movies(movieid),
+    genreid integer REFERENCES genres(genreid)
+);
