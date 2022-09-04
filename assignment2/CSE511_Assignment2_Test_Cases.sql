@@ -5,21 +5,23 @@
 并通过select * from $TABLE的方式来与以下答案进行对比验证
 */
 
-INSERT INTO users VALUES (1, 'user1');
-INSERT INTO users VALUES (2, 'user2');
-INSERT INTO movies VALUES (1, 'Comedy movie');
-INSERT INTO movies VALUES (2, 'Romance movie');
-INSERT INTO movies VALUES (3, 'Comedy and Romance movie');
-INSERT INTO genres VALUES (1, 'Comedy');
-INSERT INTO genres VALUES (2, 'Romance');
-INSERT INTO ratings VALUES (1, 1, 2, 1661546436);
-INSERT INTO ratings VALUES (1, 2, 4, 1661546437);
-INSERT INTO ratings VALUES (2, 1, 3, 1661546438);
-INSERT INTO ratings VALUES (2, 3, 1, 1661546438);
-INSERT INTO hasagenre VALUES (1, 1);
-INSERT INTO hasagenre VALUES (2, 2);
-INSERT INTO hasagenre VALUES (3, 1);
-INSERT INTO hasagenre VALUES (3, 2);
+-- INSERT INTO users VALUES (1, 'user1');
+-- INSERT INTO users VALUES (2, 'user2');
+-- INSERT INTO movies VALUES (1, 'Comedy movie');
+-- INSERT INTO movies VALUES (2, 'Romance movie');
+-- INSERT INTO movies VALUES (3, 'Comedy and Romance movie');
+INSERT INTO movies VALUES (4, 'Comedy movie 1');
+-- INSERT INTO genres VALUES (1, 'Comedy');
+-- INSERT INTO genres VALUES (2, 'Romance');
+-- INSERT INTO ratings VALUES (1, 1, 2, 1661546436);
+-- INSERT INTO ratings VALUES (1, 2, 4, 1661546437);
+-- INSERT INTO ratings VALUES (2, 1, 3, 1661546438);
+-- INSERT INTO ratings VALUES (2, 3, 1, 1661546438);
+-- INSERT INTO hasagenre VALUES (1, 1);
+-- INSERT INTO hasagenre VALUES (2, 2);
+-- INSERT INTO hasagenre VALUES (3, 1);
+-- INSERT INTO hasagenre VALUES (3, 2);
+INSERT INTO hasagenre VALUES (4, 1);
 
 /*
 各query的答案如下（如果你使用的不是postgresql，那么你应该能看到相似的结果）：
